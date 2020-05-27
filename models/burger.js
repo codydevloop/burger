@@ -8,7 +8,7 @@ const orm = require("../config/orm");
 const burger = {
     all: async () => {
 
-        const result = await orm.all("burger");  // the string is the name of the DB table
+        const result = await orm.all("burgers");  // the string is the name of the DB table
 
         return result;
     }

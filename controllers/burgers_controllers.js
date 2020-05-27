@@ -8,11 +8,12 @@ router.get("/", async (req, res) => {
     // burger.js uses orm to make call to db
     // and return the requested info to data
     const data = await burger.all();
+    //console.log(data);
   
 
     // now we pass that data to handlebars  "VIEW"
     // 
-    res.render("index", { burger: data });
+    res.render("index", { burgers: data });
   });
 
 
