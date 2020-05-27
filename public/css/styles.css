@@ -1,0 +1,11 @@
+body{
+    font-family: 'Roboto Slab', sans-serif;
+    /* background-image: url("/assets/burgerbackground.jpg"); */
+    background-image: url("/assets/sized.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1{
+    color: white;
+}

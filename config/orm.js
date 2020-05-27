@@ -75,7 +75,3 @@ const printQuestionMarks = num => {
 // * `selectAll()`
 // * `insertOne()`
 // * `updateOne()`
-
-
-//use exercises for this
-module.exports = orm;
