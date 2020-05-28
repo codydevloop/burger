@@ -15,7 +15,7 @@ $(function() {
         data: newBurger
       }).then(
         function() {
-          // location.reload();
+          location.reload();
         }
       );
     });
