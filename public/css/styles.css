@@ -1,11 +1,19 @@
 body{
     font-family: 'Roboto Slab', sans-serif;
+    color: red;
     /* background-image: url("/assets/burgerbackground.jpg"); */
     background-image: url("/assets/sized.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-h1{
+.h2, h2 {
     color: white;
+    text-align: center; 
+    /* text-decoration: underline; */
 }
+
+.list-group-item{
+    color: black;
+}
+
