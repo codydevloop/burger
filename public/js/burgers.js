@@ -2,7 +2,7 @@
 $(function() {
     $("#buttonAddBurger").on("click", function(event) {
 
-      event.preventDefault();
+      //event.preventDefault();
 
       let inputEl = $("#inputBurger");
       let newBurger = {
@@ -15,7 +15,7 @@ $(function() {
         data: newBurger
       }).then(
         function() {
-          location.reload();
+          //location.reload();
         }
       );
     });
