@@ -11,7 +11,16 @@ const burger = {
         const result = await orm.all("burgers");  // the string is the name of the DB table
 
         return result;
-    }
+    },
+
+    create: async (cols, vals) => {
+        const result = await orm.create("burgers", cols, vals);
+        //console.log(vals.length);
+        return result;
+      },
+    
 }
+
+
 
 module.exports = burger;

@@ -17,5 +17,16 @@ router.get("/", async (req, res) => {
   });
 
 
+  router.post("/api/burgers/", async (req, res) => {
+
+
+    console.log(req.body.devoured);
+    const data = await burger.create(["burger_name", "devoured"], [req.body.name, req.body.devoured]);
+  
+    //res.json({ id: data.insertId });
+    // router.get();
+  });
+
+
 
 module.exports = router;
