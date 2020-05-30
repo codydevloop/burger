@@ -18,7 +18,7 @@
         <ul class="list-group" id="notdevoured">
           {{#each burgers}}
           {{#unless devoured}}
-          <li class="list-group-item" id={{id}}>{{id}}. {{burger_name}}</li>
+          <li class="list-group-item d-flex justify-content-between">{{id}}. {{burger_name}} <button type="button " class="btn btn-success btn-sm"  id = {{id}}>Devour</button></li>
           {{/unless}}
           {{/each}}
         </ul>

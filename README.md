@@ -6,4 +6,6 @@ https://pure-taiga-10288.herokuapp.com/
 **nodemon not picking up server.js --> changed file name to index.js
 **is there something other than br for spacing
 **when webpage loads, put focus on newly created Burger
+**first AJAX call does not return anything, so then never gets executed?  Follow that route
+**on document ready - vs function
 
