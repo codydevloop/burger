@@ -18,6 +18,13 @@ const burger = {
         //console.log(vals.length);
         return result;
       },
+
+    update: async (objColVals, condition) => {
+
+        orm.update("burgers", objColVals, condition, (res) => {
+            return(res);
+          });
+    }
     
 }
 

@@ -10,7 +10,6 @@ router.get("/", async (req, res) => {
     const data = await burger.all();
     //console.log(data);
   
-
     // now we pass that data to handlebars  "VIEW"
     // 
     res.render("index", { burgers: data });
@@ -19,9 +18,21 @@ router.get("/", async (req, res) => {
 
   router.post("/api/burgers/", async (req, res) => {
 
-
     const data = await burger.create(["burger_name", "devoured"], [req.body.name, req.body.devoured]);
-  
+    res.json({id: data.insertId});
+    //res.json({ id: data.insertId });
+    //router.get();
+  });
+
+  router.put("/api/burgers/:id", async (req, res) => {
+    let id = "id="+req.params.id;
+    let devoured = req.body.devoured;
+    // console.log("id" +id);
+    // console.log("devoured" +devoured);
+
+    const data = await burger.update({devoured: devoured},id);
+    res.status(200).end();
+    
     //res.json({ id: data.insertId });
     //router.get();
   });

@@ -18,13 +18,18 @@ $(document).ready(function() {
   //    //console.log(notDevouredChildrenArr);
   // });
 
+  //###########################
+  // Add Burger
+  //###########################
+
+
   $("#buttonAddBurger").on("click", function(event) {
     //event.preventDefault();
 
     // pull user data from input box to add to the DB
     let inputBurgerEl = $("#inputBurger");
     let newBurger = {
-      name: inputBurgerEl.val(), 
+      name: inputBurgerEl.val().trim(), 
       devoured: 0};            
 
     //Send the PUT request.
@@ -33,15 +38,36 @@ $(document).ready(function() {
       data: newBurger
     }).then(
       function() {
-        //location.reload();
+      //location.reload();
       }
     );
   });
 
+    //###########################
+    // Devour Burger - UPDATE
+    //###########################
+
   $(".btn-sm").on("click", function(event) {
-      console.log($(this)[0].id);
+      let id = $(this)[0].id;
+      burgerDevoured = {
+        devoured: 1
+      };
+
+      $.ajax("/api/burgers/" +id, {
+        type: "PUT",
+        data: burgerDevoured
+      }).then(
+        function() {
+        location.reload();
+        }
+      );
+
   });
   
+
+    //###########################
+    // Devour Burger
+    //###########################
     // $(".create-form").on("submit", function(event) {
     //   // Make sure to preventDefault on a submit event.
     //   event.preventDefault();
