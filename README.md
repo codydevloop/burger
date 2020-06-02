@@ -9,3 +9,6 @@ https://pure-taiga-10288.herokuapp.com/
 **first AJAX call does not return anything, so then never gets executed?  Follow that route
 **on document ready - vs function
 
+
+script files in body and header?
+

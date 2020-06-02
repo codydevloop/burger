@@ -1,27 +1,8 @@
-// Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(document).ready(function() {
-
-    // //display id for each Child element
-  // better option would be to assign the id to the devour element
-  // $(window).on('load', function(){
-  //   // your logic here`enter code here`
-  //   //let burgersHook= $("#devoured").childElementCount;
-  //   //alert("test");
-  //    //let burgersHook= $("#notdevoured");
-  //    //let notDevouredChildren = burgersHook.children();
-  //    let notDevouredChildren = $("#notdevourd").find("#burgerId");
-  //    //let notDevouredChildrenArr = [...notDevouredChildren];
-
-  //    console.log(notDevouredChildren);  
-
-  //    //console.log("Hellow")
-  //    //console.log(notDevouredChildrenArr);
-  // });
 
   //###########################
   // Add Burger
   //###########################
-
 
   $("#buttonAddBurger").on("click", function(event) {
     //event.preventDefault();
@@ -47,7 +28,7 @@ $(document).ready(function() {
     // Devour Burger - UPDATE
     //###########################
 
-  $(".btn-sm").on("click", function(event) {
+  $(".burgerdevour").on("click", function(event) {
       let id = $(this)[0].id;
       burgerDevoured = {
         devoured: 1
@@ -61,33 +42,25 @@ $(document).ready(function() {
         location.reload();
         }
       );
+  });
 
+    //###########################
+    // Devour Burger - DELETE
+    //###########################
+  $(".burgerdelete").on("click", function(event) {
+
+    let id = $(this)[0].id;
+
+    $.ajax("/api/burgers/" +id, {
+      type: "DELETE"
+    }).then(
+      function() {
+      location.reload();
+      }
+    )
   });
   
 
-    //###########################
-    // Devour Burger
-    //###########################
-    // $(".create-form").on("submit", function(event) {
-    //   // Make sure to preventDefault on a submit event.
-    //   event.preventDefault();
-  
-    //   var newCat = {
-    //     name: $("#ca").val().trim(),
-    //     sleepy: $("[name=sleepy]:checked").val().trim()
-    //   };
-  
-    //   // Send the POST request.
-    //   $.ajax("/api/cats", {
-    //     type: "POST",
-    //     data: newCat
-    //   }).then(
-    //     function() {
-    //       console.log("created new cat");
-    //       // Reload the page to get the updated list
-    //       location.reload();
-    //     }
-    //   );
-    // });
-  });
+
+});
   

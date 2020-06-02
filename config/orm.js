@@ -64,6 +64,15 @@ const printQuestionMarks = num => {
       const result = await connection.query(queryString);
   
       return result;
+    },
+    delete: async (table, id) => {
+      console.log("in orm")
+      let queryString = `DELETE FROM ${table} WHERE ${id}`;
+
+      console.log(queryString);
+      const result = await connection.query(queryString);
+
+      return result;
     }
   };
   

@@ -24,7 +24,7 @@
         <ul class="list-group" id="notdevoured">
           {{#each burgers}}
           {{#unless devoured}}
-          <li class="list-group-item d-flex justify-content-between">{{id}}. {{burger_name}} <button type="button " class="btn btn-success btn-sm"  id = {{id}}>Devour</button></li>
+          <li class="list-group-item d-flex justify-content-between">{{id}}. {{burger_name}} <button type="button " class="btn btn-success btn-sm burgerdevour" id = {{id}}>Devour</button></li>
           {{/unless}}
           {{/each}}
         </ul>
@@ -37,7 +37,7 @@
         <ul class="list-group" id="devoured">
           {{#each burgers}}
           {{#if devoured}}
-          <li class="list-group-item">{{burger_name}}</li>
+          <li class="list-group-item d-flex justify-content-between">{{id}}. {{burger_name}}<button type="button " class="btn btn-danger btn-sm burgerdelete" id = {{id}}>X</button></burron></li>
           {{/if}}
           {{/each}}
         </ul>

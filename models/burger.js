@@ -24,6 +24,12 @@ const burger = {
         orm.update("burgers", objColVals, condition, (res) => {
             return(res);
           });
+    },
+
+    delete: async (id) => {
+        orm.delete("burgers", id, (res) => {
+            return(res);
+        });
     }
     
 }
