@@ -16,4 +16,6 @@ body{
 .list-group-item{
     color: black;
 }
-
+.jumbotron {
+    background: none
+}
